@@ -12,3 +12,5 @@ The extension might be useful when you perform an [upgrade](https://www.goivvy.c
 Important: reindex process might take some time and your window might time out. Ask your server support team to increase a server timeout.
 
 ![goivvyllc-indexer-warning](https://github.com/goivvy/simple-backend-reindexer/assets/1328492/f48b8123-bc50-4d14-9e5c-01b04c419606)
+
+If you have a question or a feature request - [contact a developer](https://www.goivvy.com).
