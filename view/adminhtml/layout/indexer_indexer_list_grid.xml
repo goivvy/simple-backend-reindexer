@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * This source file is subject to the Open Software License (OSL 3.0)
+ * It is available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/osl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to sales@goivvy.com so we can send you a copy immediately.
+ *
+ * @component  Goivvyllc_Indexer
+ * @copyright  Copyright (c) 2023 GOIVVY LLC (https://www.goivvy.com)
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author     Goivvy.com <sales@goivvy.com>
+ */
+-->
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="adminhtml.indexer.grid.columnSet">
+                     <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.indexer.grid.columnSet.indexer_reset_button" as="indexer_reset_button">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Reset</argument>
+                            <argument name="width" xsi:type="string">180</argument>
+                            <argument name="align" xsi:type="string">left</argument>
+                            <argument name="index" xsi:type="string">indexer_id</argument>
+                            <argument name="sortable" xsi:type="string">0</argument>
+                            <argument name="column_css_class" xsi:type="string">indexer-reset-button</argument>
+                            <argument name="translate" xsi:type="boolean">true</argument>
+                            <argument name="renderer" xsi:type="string">Goivvyllc\Indexer\Block\Grid\Column\Reset</argument>
+                        </arguments>
+                    </block>
+                    <block class="Magento\Backend\Block\Widget\Grid\Column" name="adminhtml.indexer.grid.columnSet.indexer_index_button" as="indexer_index_button">
+                        <arguments>
+                            <argument name="header" xsi:type="string" translate="true">Reindex</argument>
+                            <argument name="width" xsi:type="string">180</argument>
+                            <argument name="align" xsi:type="string">left</argument>
+                            <argument name="index" xsi:type="string">indexer_id</argument>
+                            <argument name="sortable" xsi:type="string">0</argument>
+                            <argument name="column_css_class" xsi:type="string">indexer-index-button</argument>
+                            <argument name="translate" xsi:type="boolean">true</argument>
+                            <argument name="renderer" xsi:type="string">Goivvyllc\Indexer\Block\Grid\Column\Index</argument>
+                        </arguments>
+                   </block>
+        </referenceBlock>
+        <referenceBlock name="adminhtml.indexer.grid.grid.massaction">
+          <arguments> 
+               <argument name="options" xsi:type="array">             
+                     <item name="invalidate_index" xsi:type="array">
+                         <item name="label" xsi:type="string" translate="true">Reindex</item>
+                         <item name="url" xsi:type="string">goivvyllcindexer/reindex/reindex</item>
+                         <item name="confirm" xsi:type="string" translate="true">Are you sure you want to reindex the selected indexer(s)? It might take some time and a window can even time out. Ask your hosting to increase request timeout if it happens.</item>
+                     </item>
+               </argument>
+          </arguments>                       
+        </referenceBlock>
+    </body>
+</page>
